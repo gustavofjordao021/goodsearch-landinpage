@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
 
-function App() {
+import CTA from "./components/CTA/CTA"
+import Hero from "./components/Hero/Hero"
+import Modal from "./components/Modal/Modal"
+import Footer from "./components/Footer/Footer"
+import Header from "./components/Header/Header"
+import Features from "./components/Features/Features";
+import ModalForm from "./components/ModalForm/ModalForm"
+
+const App = () => {
+  const [modalVisibilityState, setModalVisibilityState] = useState({
+    isModalVisible: false,
+  });
+
+  let toggleModalVisibility = () => {
+    isModalVisible ? 
+    (setModalVisibilityState({
+      isModalVisible: false
+    })) : 
+    (setModalVisibilityState({
+      isModalVisible: true
+    }))
+  }
+
+  const { isModalVisible } = modalVisibilityState;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header modalVisibilityToggler={toggleModalVisibility} />
+      <Hero modalVisibilityToggler={toggleModalVisibility} />
+      <Features /> 
+      <CTA modalVisibilityToggler={toggleModalVisibility} />
+      <Footer />
+      {isModalVisible ? (<Modal children={<ModalForm modalVisibilityToggler={toggleModalVisibility} />} modalVisibility={isModalVisible} />) : ("")}
     </div>
   );
-}
+};
 
 export default App;
