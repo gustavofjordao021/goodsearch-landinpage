@@ -32,6 +32,10 @@ const App = () => {
       <CTA modalVisibilityToggler={toggleModalVisibility} />
       <Footer />
       {isModalVisible ? (<Modal children={<ModalForm modalVisibilityToggler={toggleModalVisibility} />} modalVisibility={isModalVisible} />) : ("")}
+      <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
     </div>
   );
 };

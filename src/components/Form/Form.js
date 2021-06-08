@@ -31,17 +31,17 @@ const Form = (props) => {
       });
     } else {
       setLifecycleState({ errors: [], isError: false, isLoading: true });
-      // SUBSCRIBE_SERVICE.login({
-      //   email: credentialsState.email,
-      // })
-      SUBSCRIBE_SERVICE.runTest()
-      .then((response) => {
+      SUBSCRIBE_SERVICE.subscribeUser({
+        email: credentialsState.email,
+      })      
+      .then(() => {
         setLifecycleState({
           ...lifecycleState,
           isLoading: false,
         });
       })
-      .catch((error) => {      
+      .catch((error) => {
+        console.log(process.env.SHEET_BEST_ID);      
         setLifecycleState({
           errors: error.response.data.message,
           isError: true,
