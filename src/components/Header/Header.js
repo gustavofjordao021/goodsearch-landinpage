@@ -17,11 +17,11 @@ const Header = (props) => {
   return (
     <>
       {isHeaderVisible ? (
-        <div className="bg-indigo-600">
+        <div className="bg-green-600">
           <div className="max-w-7xl py-3 px-2 sm:px-8 md:mx-4 lg:px-10">
             <div className="flex items-center justify-between flex-wrap">
               <div className="w-0 flex-1 flex items-center">
-                <span className="flex p-2 rounded-lg bg-indigo-800">
+                <span className="flex p-2 rounded-lg bg-green-800">
                   <SpeakerphoneIcon
                     className="h-6 w-6 text-white"
                     aria-hidden="true"
@@ -38,7 +38,7 @@ const Header = (props) => {
               </div>
               <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
                 <button
-                  className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50"
+                  className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-green-600 bg-white hover:bg-green-50"
                   onClick={() => modalVisibilityToggler()}
                 >
                   Subscribe today
@@ -47,7 +47,7 @@ const Header = (props) => {
               <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
                 <button
                   type="button"
-                  className="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+                  className="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
                   onClick={() => toggleHeaderVisibility()}
                 >
                   <span className="sr-only">Dismiss</span>

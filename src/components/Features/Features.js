@@ -1,65 +1,69 @@
-import { AnnotationIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from '@heroicons/react/outline'
+import {
+  CashIcon,
+  GlobeAltIcon,
+  CollectionIcon,
+} from "@heroicons/react/outline";
 
 const features = [
   {
-    name: 'Competitive exchange rates',
+    name: "Search the web",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "Instead of using other search engines, navigate the web through Goodsearch engine which is powered by Google© and get the best results.",
     icon: GlobeAltIcon,
   },
   {
-    name: 'No hidden fees',
+    name: "Earn tokens from your searches",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: ScaleIcon,
+      "As you navigate and click on sponsored results, the revenue generated from advertisers is transformed into tokens straight into your Goodwallet©.",
+    icon: CollectionIcon,
   },
   {
-    name: 'Transfers are instant',
+    name: "Pledge tokens to your favorite causes",
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LightningBoltIcon,
+      "Goodsearch partners with a myriad of partners and projets for good. You can pledge tokens to your favorite projects, which then gets converted into a donation.",
+    icon: CashIcon,
   },
-  {
-    name: 'Mobile notifications',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: AnnotationIcon,
-  },
-]
+];
 
 const Features = () => {
   return (
     <div id="features" className="py-12 bg-white">
       <div className="flex flex-col justify-items-center max-w-7xl mx-4 px-4 sm:px-8 md:mx-4 lg:px-10">
         <div className="text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">How it works</h2>
+          <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
+            How it works
+          </h2>
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            A better way to send money
+            A better way to search the web
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+            Earn tokes while searching the web, and put those tokens to good use
+            by investing them on the right projects for good.
           </p>
         </div>
 
         <div className="mt-10">
-          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
             {features.map((feature) => (
               <div key={feature.name} className="relative">
                 <dt>
-                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="absolute flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">{feature.name}</p>
+                  <p className="ml-16 text-lg leading-6 font-medium text-gray-900">
+                    {feature.name}
+                  </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base text-gray-500">{feature.description}</dd>
+                <dd className="mt-2 ml-16 text-base text-gray-500">
+                  {feature.description}
+                </dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Features;
