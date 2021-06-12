@@ -27,7 +27,7 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="bg-white flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12">
+    <div className="shadow-md bg-white flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12">
       <div className="text-center">
         <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
           How it works
