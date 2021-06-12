@@ -25,7 +25,7 @@ const App = () => {
 
   const { isModalVisible } = modalVisibilityState;
   return (
-    <div className="App">
+    <div className="App flex flex-col items-center">
       <Header modalVisibilityToggler={toggleModalVisibility} />
       <Hero modalVisibilityToggler={toggleModalVisibility} />
       <Features />
