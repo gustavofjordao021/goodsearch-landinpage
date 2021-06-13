@@ -28,8 +28,8 @@ const Hero = (props) => {
                   </span>
                 </p>
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:block md:mt-4 md:text-xl lg:mx-0">
-                  Goodsearch works with advertisers to generate revenue on every
-                  search, and to award its users with the ability to pick{" "}
+                  GoodProtocol works with advertisers to generate revenue on
+                  every search, and award its users GoodTokens so they can pick{" "}
                   <span className="relative inline-block">
                     <span className="z-20 relative font-bold text-gray-700">
                       which projects they want to back.
