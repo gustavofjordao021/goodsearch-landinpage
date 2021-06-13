@@ -96,6 +96,7 @@ const ModalForm = (props) => {
                   <div className="mb-2">
                     {isError ? (
                       <Alert
+                        alertVisibility={isError}
                         alertMessage={lifecycleState.errors}
                         alertType={"error"}
                       />

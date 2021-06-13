@@ -21,13 +21,20 @@ const Form = (props) => {
     isLoading: false,
   });
 
+  let toggleAlertVisibility = () => {
+    setLifecycleState({
+      ...lifecycleState,
+      isError: false,
+    });
+  };
+
   let handleSubmit = (event) => {
     event.preventDefault();
     if (
-      !VALIDATORS.isEmpty(credentialsState.email) &&
-      !VALIDATORS.isEmail(credentialsState.email)
+      VALIDATORS.isEmpty(credentialsState.email) === true ||
+      VALIDATORS.isEmail(credentialsState.email) === false
     ) {
-      setLifecycleState({
+      return setLifecycleState({
         errors: "Please confirm email adress before trying to subscribe.",
         isError: true,
         isLoading: false,
@@ -84,6 +91,8 @@ const Form = (props) => {
                   <div className="mb-2">
                     {isError ? (
                       <Alert
+                        alertVisibility={isError}
+                        alertToggle={toggleAlertVisibility}
                         alertMessage={lifecycleState.errors}
                         alertType={"error"}
                       />
