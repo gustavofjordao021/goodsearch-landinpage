@@ -71,10 +71,10 @@ const Form = (props) => {
           {!isDone ? (
             <>
               <div>
-                <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900 lg:text-3xl">
+                <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900">
                   Subscribe to{" "}
                   <span className="relative inline-block">
-                    <span className="z-20 relative">Goodsearch!</span>
+                    <span className="z-20 relative">GoodProtocol!</span>
                     <div className="bg-green-300 absolute w-full h-2 bottom-0.5 z-10"></div>
                   </span>
                   <p className="mt-2 text-center text-lg font-normal text-gray-600">
@@ -142,9 +142,9 @@ const Form = (props) => {
                   />
                 </div>
                 <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900 lg:text-3xl">
-                  Thank you for subscribing to{" "}
+                  Thank you for subscribing to the{" "}
                   <span className="relative inline-block">
-                    <span className="z-20 relative">Goodsearch!</span>
+                    <span className="z-20 relative">GoodProtocol!</span>
                     <div className="bg-green-300 absolute w-full h-2 bottom-0.5 z-10"></div>
                   </span>
                   <p className="mt-2 text-center text-lg font-normal text-gray-600">

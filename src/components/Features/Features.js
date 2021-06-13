@@ -8,7 +8,7 @@ const features = [
   {
     name: "Search the web",
     description:
-      "Instead of using other search engines, navigate the web through Goodsearch engine which is powered by Google© and get the best results.",
+      "Instead of using other search engines, surf the web through GoodProtocol's search engine which is powered by Google© and get the best results.",
     icon: GlobeAltIcon,
   },
   {
@@ -18,16 +18,19 @@ const features = [
     icon: CollectionIcon,
   },
   {
-    name: "Pledge tokens to your favorite causes",
+    name: "Donate to your favorite causes",
     description:
-      "Goodsearch partners with a myriad of partners and projets for good. You can pledge tokens to your favorite projects, which then gets converted into a donation.",
+      "GoodProtocol partners with a myriad of partners and projets for good. You can pledge tokens to your favorite projects, which then gets converted into a donation.",
     icon: CashIcon,
   },
 ];
 
 const Features = () => {
   return (
-    <div className="shadow-md bg-white flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12">
+    <div
+      id="features"
+      className="shadow-md bg-white flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12"
+    >
       <div className="text-center">
         <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
           How it works

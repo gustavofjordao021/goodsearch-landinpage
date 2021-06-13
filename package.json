@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.2",
+    "@headlessui/react": "^1.2.0",
     "@heroicons/react": "^1.0.1",
     "@mailchimp/mailchimp_marketing": "^3.0.44",
     "@testing-library/jest-dom": "^5.13.0",

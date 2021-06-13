@@ -1,64 +1,141 @@
-import React, { useState } from "react";
-import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import {
+  CollectionIcon,
+  CurrencyDollarIcon,
+  MenuIcon,
+  XIcon,
+} from "@heroicons/react/outline";
+
+const solutions = [
+  {
+    name: "Features",
+    description:
+      "Get a better understanding of where your traffic is coming from.",
+    href: "#features",
+    icon: CollectionIcon,
+  },
+  {
+    name: "GoodToken©",
+    description: "Speak directly to your customers in a more meaningful way.",
+    href: "#token",
+    icon: CurrencyDollarIcon,
+  },
+];
 
 const Header = (props) => {
-  const [headerVisibilityState, setHeaderVisibilityState] = useState({
-    isHeaderVisible: true,
-  });
-
-  let toggleHeaderVisibility = () => {
-    setHeaderVisibilityState({
-      isHeaderVisible: false,
-    });
-  };
-
-  const { isHeaderVisible } = headerVisibilityState;
   const { modalVisibilityToggler } = props;
   return (
-    <>
-      {isHeaderVisible ? (
-        <div className="shadow-md bg-green-600 w-full py-3 px-2 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12">
-          <div className="flex items-center justify-between">
-            <div className="w-0 flex-1 flex items-center">
-              <span className="flex p-2 rounded-lg bg-green-800">
-                <SpeakerphoneIcon
-                  className="h-6 w-6 text-white"
-                  aria-hidden="true"
-                />
-              </span>
-              <p className="ml-3 font-medium text-white truncate">
-                <span className="md:hidden">
-                  A better way to search is here!
-                </span>
-                <span className="hidden md:inline">
-                  Big news! We're excited to announce a better way to search.
-                </span>
-              </p>
-            </div>
-            <div className="mt-2 flex-shrink-0 w-full sm-2 sm:mt-0 sm:w-auto">
-              <button
-                className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-green-600 bg-white hover:bg-green-50"
-                onClick={() => modalVisibilityToggler()}
-              >
-                Subscribe today
-              </button>
-            </div>
-            <div className="flex-shrink-0 sm-3 sm:ml-3">
-              <button
-                type="button"
-                className="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
-                onClick={() => toggleHeaderVisibility()}
-              >
-                <span className="sr-only">Dismiss</span>
-                <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
-              </button>
-            </div>
+    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100  md:px-12 md:justify-start xl:w-6/12">
+      {({ open }) => (
+        <>
+          <div className="flex justify-start lg:w-0 lg:flex-1">
+            <a href="/">
+              <span className="sr-only">Workflow</span>
+              <img
+                className="h-8 w-auto sm:h-10"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                alt=""
+              />
+            </a>
           </div>
-        </div>
-      ) : (
-        ""
+          <div className="-mr-2 -my-2 md:hidden">
+            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+              <span className="sr-only">Open menu</span>
+              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+            </Popover.Button>
+          </div>
+          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            <a
+              href="#features"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              Features
+            </a>
+            <a
+              href="#token"
+              className="text-base font-medium text-gray-500 hover:text-gray-900"
+            >
+              GoodToken©
+            </a>
+          </Popover.Group>
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <button
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:bg-green-500"
+              onClick={() => modalVisibilityToggler()}
+            >
+              Subscribe
+            </button>
+          </div>
+
+          <Transition
+            show={open}
+            as={Fragment}
+            enter="duration-200 ease-out"
+            enterFrom="opacity-0 scale-95"
+            enterTo="opacity-100 scale-100"
+            leave="duration-100 ease-in"
+            leaveFrom="opacity-100 scale-100"
+            leaveTo="opacity-0 scale-95"
+          >
+            <Popover.Panel
+              focus
+              static
+              className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            >
+              <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+                <div className="pt-5 pb-6 px-5">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <img
+                        className="h-8 w-auto"
+                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                        alt="Workflow"
+                      />
+                    </div>
+                    <div className="-mr-2">
+                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
+                        <span className="sr-only">Close menu</span>
+                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                      </Popover.Button>
+                    </div>
+                  </div>
+                  <div className="mt-6">
+                    <nav className="grid gap-y-8">
+                      {solutions.map((item) => (
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                        >
+                          <item.icon
+                            className="flex-shrink-0 h-6 w-6 text-green-600"
+                            aria-hidden="true"
+                          />
+                          <span className="ml-3 text-base font-medium text-gray-900">
+                            {item.name}
+                          </span>
+                        </a>
+                      ))}
+                    </nav>
+                  </div>
+                </div>
+                <div className="py-6 px-5 space-y-6">
+                  <div>
+                    <button
+                      className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:bg-green-500"
+                      onClick={() => modalVisibilityToggler()}
+                    >
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </Popover.Panel>
+          </Transition>
+        </>
       )}
-    </>
+    </Popover>
   );
 };
 
