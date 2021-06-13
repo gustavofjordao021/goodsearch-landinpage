@@ -28,7 +28,7 @@ const solutions = [
 const Header = (props) => {
   const { modalVisibilityToggler } = props;
   return (
-    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100  md:px-14 md:justify-start xl:w-6/12">
+    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100 shadow-md md:px-14 md:justify-start xl:w-6/12">
       {({ open }) => (
         <>
           <div className="flex flex-row align-middle justify-start lg:w-0 lg:flex-1 text-black">
@@ -40,7 +40,7 @@ const Header = (props) => {
                 alt="logo"
               />
             </a>
-            <p className="absolute top-8 left-20 text-md tracking-tight font-extrabold text-gray-900 lg:top-10 lg:left-28">
+            <p className="absolute top-8 left-20 text-md tracking-tight font-extrabold text-gray-900 lg:top-10 lg:left-28 xl:hidden">
               The GoodProtocol
             </p>
           </div>
@@ -89,7 +89,7 @@ const Header = (props) => {
               className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
             >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                <div className="pt-5 pb-6 px-6">
+                <div className="pt-6 pb-6 px-6">
                   <div className="flex items-center justify-between">
                     <div>
                       <img
