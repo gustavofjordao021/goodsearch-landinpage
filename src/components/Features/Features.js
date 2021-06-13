@@ -6,21 +6,21 @@ import {
 
 const features = [
   {
-    name: "Search the web",
+    name: "Search the web and earn tokens",
     description:
-      "Instead of using other search engines, surf the web through GoodProtocol's search engine which is powered by Google© and get the best results.",
+      "Instead of using other search engines, surf the web through GoodProtocol's search engine which is powered by Google©, get the best results and earn GoodTokens as you go.",
     icon: GlobeAltIcon,
   },
   {
-    name: "Earn tokens from your searches",
+    name: "Vote using your tokens",
     description:
-      "As you navigate and click on sponsored results, the revenue generated from advertisers is transformed into tokens straight into your Goodwallet©.",
+      "GoodProtocol partners with a myriad of partners and projets for good. Pledge tokens and help steer our protocol towards your favorite projects and turn the ad revenue into donations.",
     icon: CollectionIcon,
   },
   {
-    name: "Donate to your favorite causes",
+    name: "Get more tokens as you vote",
     description:
-      "GoodProtocol partners with a myriad of partners and projets for good. You can pledge tokens to your favorite projects, which then gets converted into a donation.",
+      "GoodProtocol awards its token-holders that help steer the community with more tokens as they vote on different causes and proposals. Helping the community do good is good for you too!",
     icon: CashIcon,
   },
 ];
@@ -29,7 +29,7 @@ const Features = () => {
   return (
     <div
       id="features"
-      className="shadow-md bg-white flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12"
+      className="shadow-md bg-gray-50 flex flex-col justify-items-center w-full mx-4 px-4 py-12 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12"
     >
       <div className="text-center">
         <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
@@ -43,7 +43,6 @@ const Features = () => {
           by investing them on the right projects for good.
         </p>
       </div>
-
       <div className="mt-10">
         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
           {features.map((feature) => (

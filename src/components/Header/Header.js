@@ -7,7 +7,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 
-import Logo from "../../logo.png";
+import Logo from "../../img/logo.png";
 
 const solutions = [
   {
