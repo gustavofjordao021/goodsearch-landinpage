@@ -72,7 +72,7 @@ const Form = (props) => {
             <>
               <div>
                 <h2 className="mt-6 text-center text-2xl font-extrabold text-gray-900">
-                  Subscribe to{" "}
+                  Subscribe to the{" "}
                   <span className="relative inline-block">
                     <span className="z-20 relative">GoodProtocol!</span>
                     <div className="bg-green-300 absolute w-full h-2 bottom-0.5 z-10"></div>

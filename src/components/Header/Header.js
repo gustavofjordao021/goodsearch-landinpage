@@ -7,6 +7,8 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 
+import Logo from "../../logo.png";
+
 const solutions = [
   {
     name: "Features",
@@ -26,18 +28,21 @@ const solutions = [
 const Header = (props) => {
   const { modalVisibilityToggler } = props;
   return (
-    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100  md:px-12 md:justify-start xl:w-6/12">
+    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100  md:px-14 md:justify-start xl:w-6/12">
       {({ open }) => (
         <>
-          <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="flex flex-row align-middle justify-start lg:w-0 lg:flex-1 text-black">
             <a href="/">
-              <span className="sr-only">Workflow</span>
+              <span className="sr-only">GoodProtocol</span>
               <img
-                className="h-8 w-auto sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt=""
+                className="h-8 w-auto sm:h-10 text-green-500"
+                src={Logo}
+                alt="logo"
               />
             </a>
+            <p className="absolute top-8 left-20 text-md tracking-tight font-extrabold text-gray-900 lg:top-10 lg:left-28">
+              The GoodProtocol
+            </p>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
@@ -84,14 +89,17 @@ const Header = (props) => {
               className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
             >
               <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                <div className="pt-5 pb-6 px-5">
+                <div className="pt-5 pb-6 px-6">
                   <div className="flex items-center justify-between">
                     <div>
                       <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt="Workflow"
+                        className="h-10 w-auto"
+                        src={Logo}
+                        alt="GoodProtocol"
                       />
+                      <p className="absolute top-10 left-20 text-md tracking-tight font-extrabold text-gray-900 lg:top-10 lg:left-28">
+                        The GoodProtocol
+                      </p>
                     </div>
                     <div className="-mr-2">
                       <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500">
