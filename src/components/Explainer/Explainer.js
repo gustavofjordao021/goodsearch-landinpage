@@ -2,7 +2,7 @@ import ExplainerImage from "../../img/explainer.png";
 
 import { CurrencyDollarIcon } from "@heroicons/react/outline";
 
-const Explainer = () => {
+const Explainer = (props) => {
   return (
     <div
       id="token"
@@ -46,7 +46,15 @@ const Explainer = () => {
               through good behavior, and a line to raise additional funds for
               the causes proposed by the community.
             </p>
-            <button class="mt-3 text-green-500 inline-flex items-center">
+            <button
+              class="mt-3 text-green-500 inline-flex items-center"
+              onClick={() =>
+                window.open(
+                  "https://ethereum.org/en/developers/docs/standards/tokens/erc-20/",
+                  "_blank"
+                )
+              }
+            >
               See more on ERC-20 tokens
               <svg
                 fill="none"
