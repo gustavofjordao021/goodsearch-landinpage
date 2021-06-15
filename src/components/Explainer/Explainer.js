@@ -6,12 +6,12 @@ const Explainer = (props) => {
   return (
     <div
       id="token"
-      class="bg-white text-gray-600 max-w-7xl w-screen shadow-md container px-4 mx-4 lg:px-12 lg:mx-12 py-24 flex flex-wrap xl:w-6/12"
+      class="bg-white text-gray-600 max-w-8xl w-screen shadow-md px-4 mx-4 lg:px-12 lg:mx-12 py-24 flex flex-wrap xl:w-3/4"
     >
-      <div class="lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
+      <div class="flex justify-center lg:w-1/2 w-full mb-10 lg:mb-0 rounded-lg overflow-hidden">
         <img
           alt="feature"
-          class="object-cover object-center h-full w-full"
+          class="object-cover object-center h-full xl:w-3/4"
           src={ExplainerImage}
         />
       </div>

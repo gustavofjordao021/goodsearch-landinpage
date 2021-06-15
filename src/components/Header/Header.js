@@ -28,7 +28,7 @@ const solutions = [
 const Header = (props) => {
   const { modalVisibilityToggler } = props;
   return (
-    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-7xl px-8 py-6 justify-between items-center border-b-2 border-gray-100 shadow-md md:px-14 md:justify-start xl:w-6/12">
+    <Popover className="flex flex-row flex-grow w-screen bg-white max-w-8xl px-8 py-6 justify-between items-center border-b-2 border-gray-100 shadow-md md:px-14 md:justify-start xl:w-3/4">
       {({ open }) => (
         <>
           <div className="flex flex-row align-middle justify-start lg:w-0 lg:flex-1 text-black">

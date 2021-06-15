@@ -4,7 +4,7 @@ const Hero = (props) => {
   const { modalVisibilityToggler } = props;
   return (
     <>
-      <div className="max-w-7xl w-screen flex flex-col-reverse justify-center flex-grow bg-white min-h-full lg:flex lg:flex-row-reverse lg:items-center lg:justify-center xl:w-6/12 xl:shadow-md">
+      <div className="max-w-8xl w-screen flex flex-col-reverse justify-center flex-grow bg-white min-h-full lg:flex lg:flex-row-reverse lg:items-center lg:justify-center xl:w-3/4 xl:shadow-md">
         <Form />
         <div className="min-h-full">
           <div className="relative pb-6 bg-white lg:w-full">
