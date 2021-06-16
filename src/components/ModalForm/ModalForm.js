@@ -25,8 +25,8 @@ const ModalForm = (props) => {
   let handleSubmit = (event) => {
     event.preventDefault();
     if (
-      !VALIDATORS.isEmpty(credentialsState.email) &&
-      !VALIDATORS.isEmail(credentialsState.email)
+      VALIDATORS.isEmpty(credentialsState.email) === true ||
+      VALIDATORS.isEmail(credentialsState.email) === false
     ) {
       setLifecycleState({
         errors: "Please confirm email adress before trying to subscribe.",
