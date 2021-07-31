@@ -67,7 +67,7 @@ const Form = (props) => {
   return (
     <>
       <div className="min-h-full flex flex-grow items-center justify-center bg-white px-4 mb-8 sm:px-6 lg:px-8">
-        <div className="max-w-md w-full space-y-8 border border-gray-300 bg-gray-50 p-8 rounded-xl shadow-md">
+        <div className="max-w-md w-full space-y-8 border border-gray-300 bg-gray-50 p-8 rounded-xl shadow-sm">
           {!isDone ? (
             <>
               <div>

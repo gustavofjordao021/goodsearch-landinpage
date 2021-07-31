@@ -1,7 +1,7 @@
 const CTA = (props) => {
   const { modalVisibilityToggler } = props;
   return (
-    <div className="shadow-md bg-gray-50 w-full flex flex-col text-center items-center py-12 mx-4 px-4 sm:px-8 md:flex-row md:text-left lg:px-12 lg:flex lg:items-center lg:justify-between xl:w-3/4">
+    <div className="shadow-md bg-gray-50 w-full flex flex-col text-center items-center py-12 px-4 px-4 sm:px-8 md:flex-row md:text-left md:mx-12 lg:px-12 lg:flex lg:items-center lg:justify-between xl:w-3/4">
       <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
         <span className="block">Ready to start earning?</span>
         <span className="block text-green-600">

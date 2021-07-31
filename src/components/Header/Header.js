@@ -66,7 +66,13 @@ const Header = (props) => {
           </Popover.Group>
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <button
-              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:bg-green-500"
+              className="mr-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-gray-100 rounded-md shadow-sm text-base font-medium text-green-600 bg-white hover:bg-gray-100 focus:bg-gray-100"
+              onClick={() => modalVisibilityToggler()}
+            >
+              Launch App
+            </button>
+            <button
+              className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:bg-green-500"
               onClick={() => modalVisibilityToggler()}
             >
               Subscribe
@@ -130,6 +136,12 @@ const Header = (props) => {
                 </div>
                 <div className="py-6 px-5 space-y-6">
                   <div>
+                    <button
+                      className="mb-2 w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-green-600 bg-white hover:bg-gray-100 focus:bg-gray-100 border-gray-100 "
+                      onClick={() => modalVisibilityToggler()}
+                    >
+                      Launch App
+                    </button>
                     <button
                       className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-green-600 hover:bg-green-700 focus:bg-green-500"
                       onClick={() => modalVisibilityToggler()}
