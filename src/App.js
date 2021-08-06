@@ -1,8 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// import CTA from "./components/CTA/CTA";
 import Home from "./views/Home";
+import Footer from "./components/Footer/Footer";
+import Application from "./views/Application";
 
 const App = () => {
   return (
@@ -10,8 +11,9 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/app" component={App} />
+          <Route exact path="/app" component={Application} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

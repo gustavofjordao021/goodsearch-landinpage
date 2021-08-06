@@ -25,8 +25,10 @@ const solutions = [
   },
 ];
 
+
 const Header = (props) => {
-  const { modalVisibilityToggler } = props;
+  const { pushToApplication, modalVisibilityToggler } = props;
+
   return (
     <Popover className="flex flex-row flex-grow w-screen bg-white max-w-8xl px-8 py-6 justify-between items-center border-b-2 border-gray-100 shadow-md md:px-14 md:justify-start xl:w-3/4">
       {({ open }) => (
@@ -67,7 +69,7 @@ const Header = (props) => {
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <button
               className="mr-2 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-gray-100 rounded-md shadow-sm text-base font-medium text-green-600 bg-white hover:bg-gray-100 focus:bg-gray-100"
-              onClick={() => modalVisibilityToggler()}
+              onClick={() => pushToApplication()}
             >
               Launch App
             </button>
@@ -138,7 +140,7 @@ const Header = (props) => {
                   <div>
                     <button
                       className="mb-2 w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-green-600 bg-white hover:bg-gray-100 focus:bg-gray-100 border-gray-100 "
-                      onClick={() => modalVisibilityToggler()}
+                      onClick={() => pushToApplication()}
                     >
                       Launch App
                     </button>

@@ -17,7 +17,7 @@ const Banner = (props) => {
   return (
     <>
       {isBannerVisible ? (
-        <div className="shadow-md bg-green-600 w-full py-3 px-2 sm:px-8 md:mx-4 lg:px-10 xl:w-6/12">
+        <div className="shadow-md bg-green-600 w-full py-3 px-2 sm:px-8 md:mx-4 lg:px-10 xl:w-3/4">
           <div className="flex items-center justify-between">
             <div className="w-0 flex-1 flex items-center">
               <span className="flex p-2 rounded-lg bg-green-800">

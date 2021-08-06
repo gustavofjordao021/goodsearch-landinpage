@@ -8,7 +8,7 @@ const Hero = (props) => {
         <Form />
         <div className="min-h-full">
           <div className="relative pb-6 bg-white lg:w-full">
-            <main className="my-5 mx-4 max-w-7xl px-4 sm:my-12 md:mx-10 md:my-14 lg:my-18 xl:mt-28">
+            <main className="my-5 max-w-7xl px-4 sm:my-12 md:mx-10 md:my-14 lg:my-18 xl:mt-28">
               <div className="max-w-xl sm:text-center lg:text-left">
                 <h1 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                   <span className="block xl:inline">Do good with every</span>

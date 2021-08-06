@@ -29,7 +29,7 @@ const Features = () => {
   return (
     <div
       id="features"
-      className="shadow-md bg-gray-50 flex flex-col justify-items-center mx-4 px-4 py-12 sm:px-8 md:mx-12 lg:px-10 xl:w-3/4"
+      className="shadow-md bg-gray-50 flex flex-col justify-items-center px-4 py-12 sm:px-8 md:px-14 xl:w-3/4"
     >
       <div className="text-center">
         <h2 className="text-base text-green-600 font-semibold tracking-wide uppercase">
